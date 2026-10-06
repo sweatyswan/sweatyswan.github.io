@@ -621,6 +621,35 @@ body.has-cmp main{padding-bottom:140px}
 .price{font-size:24px;line-height:30px}
 @media (max-width:559px){.name{font-size:18px}}
 
+.gmx{background:#f5f6f8;border-left:4px solid var(--cta);padding:20px 20px 16px;margin:0 0 24px}
+.gmx-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin:0 0 12px}
+.gmx-h{margin:0;max-width:46ch;font-size:18px;line-height:1.35;letter-spacing:-.01em;font-weight:700;color:var(--black)}
+.gmx-text{max-width:none;font-size:15px;line-height:26px;color:var(--body)}
+.gmx-text p{margin:0 0 12px}
+.gmx-text h3{margin:18px 0 6px;font-size:16px;line-height:1.35;letter-spacing:0;font-weight:700;color:var(--black)}
+.gmx-text ul{margin:0 0 12px;padding-left:22px}
+.gmx-text li{margin:0 0 8px}
+.gmx-text a{color:var(--cta);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.gmx-text a:hover{color:var(--black)}
+.gmx-text a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.gmx-text strong{color:var(--black);font-weight:600}
+.gmx-more.is-collapsed{position:relative;max-height:68px;overflow:hidden}
+.gmx-more.is-collapsed::after{content:"";position:absolute;left:0;right:0;bottom:0;height:68px;background:linear-gradient(to bottom,rgba(245,246,248,0) 0%,#f5f6f8 85%)}
+.gmx-more > :first-child{margin-top:6px}
+.gmx-tw{overflow-x:auto;margin:0 0 14px;max-width:760px}
+.gmx-size{min-height:48px;padding:0 24px}
+.gmx-tw:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.gmx table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px;background:#fff}
+.gmx caption{padding:0 0 8px;text-align:left;font-weight:700;color:var(--black)}
+.gmx th,.gmx td{padding:10px 12px;text-align:left;vertical-align:top;border:1px solid #dfe3e8;color:var(--body)}
+.gmx thead th{background:#eceff3;color:var(--black);font-weight:700}
+.gmx tbody th{color:var(--black);font-weight:600}
+.gmx-tog{display:inline-flex;align-items:center;gap:6px;margin-top:4px;min-height:var(--tap);padding:0;background:none;border:0;color:var(--cta);font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.gmx-tog:hover{color:var(--black)}
+.gmx-tog .ki{width:20px;height:20px;transition:transform .2s;text-decoration:none}
+.gmx-tog[aria-expanded="true"] .ki{transform:rotate(180deg)}
+@media (min-width:860px){.gmx{padding:24px 28px 20px}}
+@media (max-width:559px){.gmx-head .btn{width:100%}.gmx-more.is-collapsed{max-height:60px}}
 </style>
 </head>
 <body>
@@ -725,10 +754,59 @@ body.has-cmp main{padding-bottom:140px}
 <main id="obsah">
 <div class="wrap">
   <h1 class="cat-title">Cestné bicykle</h1>
-  <div class="guide">
-    <p>Ako si vybrať správny model podľa úrovne a štýlu jazdy? <a href="#obsah">Čítať viac</a></p>
-    <button type="button" class="btn" id="open-size">Aká je moja veľkosť?</button>
-  </div>
+  <section class="gmx" aria-labelledby="gm-h">
+    <div class="gmx-head">
+      <h2 class="gmx-h" id="gm-h">Ako si vybrať správny model podľa úrovne a štýlu jazdy?</h2>
+      <button type="button" class="btn btn-fill gmx-size" id="open-size"><svg class="ki" viewBox="0 0 24 24" aria-hidden="true"><use href="#ki-bike"/></svg>Aká je moja veľkosť?</button>
+    </div>
+    <div class="gmx-text" id="gm">
+      <p>Cestné bicykle sú navrhnuté pre jazdu po kvalitnom povrchu, kde naplno využijete ich <strong>nízku hmotnosť, aerodynamický tvar a efektívny prenos energie</strong>. Pri výbere zohľadnite najmä svoju <strong>úroveň, štýl jazdy a rozpočet</strong>. O tom, či Vás bude jazda baviť aj na dlhých trasách, rozhodujú aj správna veľkosť rámu a kvalita komponentov.</p>
+      <div class="gmx-more is-collapsed" id="gm-more" inert>
+        <h3>Aké typy cestných bicyklov existujú?</h3>
+        <ul>
+          <li><a href="#blog-endurance-bicykle">Endurance bicykle</a> majú pohodlnejšiu geometriu, širšie plášte a vzpriamenejší posed. Sú vhodné na dlhé jazdy, výlety aj pre začiatočníkov.</li>
+          <li><a href="#blog-pretekarske-bicykle">Pretekárske bicykle</a> sú stavané na maximálny výkon: agresívna geometria, ľahký rám (často z <a href="#blog-karbonove-bicykle">karbónu</a>) a tuhá vidlica. Za výkon platíte nižším komfortom.</li>
+          <li><a href="#blog-aero-bicykle">Aero bicykle</a> majú profilované rámy a skryté vedenie káblov, ktoré znižujú odpor vzduchu. Najlepšie fungujú na rovine a v skupine.</li>
+          <li><a href="#blog-fitness-bicykle">Fitness bicykle</a> majú rovné riadidlá a spájajú rýchlosť cestného bicykla s praktickosťou mestského. Hodia sa na dochádzanie aj na víkendové výlety.</li>
+        </ul>
+
+        <h3>Ako si vybrať podľa úrovne a rozpočtu?</h3>
+        <p>Iný bicykel poslúži začiatočníkovi, iný pravidelne trénujúcemu jazdcovi a iný pretekárovi. Pri výbere myslite aj na to, kam sa chcete ako cyklista posunúť, nielen na to, kde ste dnes.</p>
+        <div class="gmx-tw" tabindex="0" role="region" aria-label="Tabuľka odporúčaní podľa úrovne jazdca, dá sa posúvať">
+          <table>
+            <caption>Odporúčanie podľa úrovne jazdca</caption>
+            <thead><tr><th scope="col">Úroveň</th><th scope="col">Odporúčaný typ</th><th scope="col">Orientačná cena</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Začiatočník</th><td>Endurance, fitness</td><td>900–1 900 €</td></tr>
+              <tr><th scope="row">Pokročilý</th><td>Road Race, endurance</td><td>2 000–3 000 €</td></tr>
+              <tr><th scope="row">Pretekár</th><td>Aero, Road Race</td><td>od 3 000 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Začiatočníkom odporúčame <a href="#blog-hlinikovy-ram">hliníkový rám</a>, jednoduché radenie a pohodlný posed. Ak jazdíte pravidelne, siahnite po kvalitnejších komponentoch, a ak sa venujete pretekom, po celokarbónovom ráme a elektronickom radení.</p>
+
+        <h3>Na čo sa pri výbere zamerať?</h3>
+        <ul>
+          <li><strong>Materiál rámu:</strong> <a href="#blog-hlinik-vs-karbon">hliník alebo karbón</a>. Hliník je cenovo dostupnejší a odolný, karbón je ľahší a lepšie tlmí vibrácie, ale je drahší.</li>
+          <li><a href="#blog-sada-radenia">Sada radenia:</a> čím vyššia trieda, tým ľahšie a presnejšie diely. Pre väčšinu hobby cyklistov je dobrou voľbou Shimano 105.</li>
+          <li><strong>Brzdy:</strong> <a href="#blog-kotucove-brzdy">kotúčové brzdy</a> brzdia výborne za každého počasia, ráfikové sú ľahšie a jednoduchšie na servis.</li>
+          <li><a href="#blog-kolesa-a-plaste">Kolesá a plášte:</a> štandardom je šírka 25–30 mm, širšie plášte sú pohodlnejšie.</li>
+        </ul>
+
+        <h3>Akú veľkosť rámu zvoliť?</h3>
+        <p>Výrobcovia nemajú jednotné veľkosti, preto porovnajte <a href="#blog-velkost-ramu">tabuľku veľkostí</a> pri konkrétnom modeli alebo použite pomôcku „Aká je moja veľkosť?“ vyššie. Ak sa nachádzate na rozhraní dvoch veľkostí, zvyčajne sa odporúča menší rám, pretože posed viete ľahšie upraviť. Najistejšie je bicykel vyskúšať v predajni alebo sa poradiť.</p>
+
+        <h3>Čo k cestnému bicyklu ešte patrí?</h3>
+        <p>Na bezpečnú jazdu patria <a href="#blog-prilba-svetla-reflexne-prvky">prilba, svetlá a reflexné prvky</a>, pre pohodlie <a href="#blog-cyklisticke-oblecenie">cyklistické oblečenie</a>, tachometer, cyklofľaša a náradie. Aby bicykel zostal rýchly a spoľahlivý, pravidelne <a href="#blog-cistenie-a-mazanie-retaze">čistite a mažte reťaz</a>, kontrolujte brzdové platničky a tlak v pneumatikách.</p>
+
+        <h3>Najčastejšie chyby pri výbere</h3>
+        <p>Najčastejšie sa volí veľkosť rámu len odhadom, bicykel sa kúpi bez vyskúšania alebo poradenstva, alebo sa podceňuje úroveň výbavy či účel použitia. Podrobnosti nájdete v článku <a href="#blog-najcastejsie-chyby">Najčastejšie chyby pri výbere cestného bicykla</a>.</p>
+
+        <p><a href="#blog-ako-vybrat-cestny-bicykel">Celý článok: Ako si vybrať správny cestný bicykel</a></p>
+      </div>
+    </div>
+    <button type="button" class="gmx-tog" id="gm-toggle" aria-expanded="false" aria-controls="gm-more"><span id="gm-toggle-t">Čítať viac</span><svg class="ki" viewBox="0 0 24 24" aria-hidden="true"><use href="#ki-chevron"/></svg></button>
+  </section>
 
   <div class="cat">
     <aside class="fpanel" id="fpanel" aria-label="Filtre produktov">
@@ -1169,6 +1247,19 @@ body.has-cmp main{padding-bottom:140px}
   mq.addEventListener ? mq.addEventListener("change", function () { if (!mq.matches) closePanel(); }) : null;
 
   /* ---------- dialóg veľkostí ---------- */
+
+  /* ---------- rozbalenie textu o výbere modelu ---------- */
+  (function () {
+    var t = $("gm-toggle"), tt = $("gm-toggle-t"), more = $("gm-more");
+    t.addEventListener("click", function () {
+      var open = t.getAttribute("aria-expanded") !== "true";
+      more.classList.toggle("is-collapsed", !open);
+      if (open) { more.removeAttribute("inert"); } else { more.setAttribute("inert", ""); }
+      t.setAttribute("aria-expanded", open ? "true" : "false");
+      tt.textContent = open ? "Čítať menej" : "Čítať viac";
+    });
+  })();
+
   var dlg = $("size-dlg"), dlgLast = null;
   function openDlg() { dlgLast = document.activeElement; dlg.hidden = false; $("size-x").focus(); }
   function closeDlg() { dlg.hidden = true; if (dlgLast && dlgLast.focus) dlgLast.focus(); }
